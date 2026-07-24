@@ -77,6 +77,7 @@ if __name__ == "__main__":
         x1_max = np.amax(X[:, 1])
         ax.set_ylim([x1_min - 3, x1_max + 3])
 
-        plt.show()
+        # plt.show()
+        plt.savefig("svm.png", dpi=120)
 
     visualize_svm()
