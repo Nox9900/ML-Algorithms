@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 # https://archive.ics.uci.edu/ml/datasets/spambase
-FILE_NAME = "spambase"
+FILE_NAME = "spambase.data"
 
 # load the data with csv
 with open(FILE_NAME, "r") as f:
