@@ -4,7 +4,6 @@ import numpy as np
 def Euclidean_distance(x1, x2):
     return np.sqrt(np.sum((x1 - x2) ** 2))
 
-
 class KNN :
     def __init__(self, k: int=3):
         self.k = k
@@ -20,7 +19,7 @@ class KNN :
     def _predict(self, x):
         #compute the distance x and all examples in the training set
         distance = [Euclidean_distance(x, x_train) for x_train in self.X_train]
-        k_indice = np.argsort(distance)[: self.k]  #sort by distance and return indeices of the first k neighbors
+        k_indice = np.argsort(distance)[: self.k]  #sort by distance and return indices of the first k neighbors
         k_neighbor_label = [self.y_train[i] for i in k_indice] # extract the labels pf the k nearest neighbor training samples 
         most_commom = Counter(k_neighbor_label).most_common(1)
 
